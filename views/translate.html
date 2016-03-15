@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>translate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h2>Program experience:</h2>
+<ul>
+<li>
+<h3>From March,2015 to now: ChinaCrowds website.</h3>
+<p><strong><em>description:</em></strong>sChinaCrowds is a online plateform that make it convenient for users to issue their questions and find people to solve them, or to say, crowdsourcing. The main development of website and app	lication for Android and ios has been finished. This program belongs to the SRT(Student Research Training) of Tsinghua. </p>
+<p><strong><em>individual contribution:</em></strong>the web page design and front end development of ChinaCrowds website.</p>
+<p><strong><em>Website:</em></strong> www.chinacrowds.com</p>
+</li>
+<li>
+<h3>From September,2015 to December,2015: shadowcats website</h3>
+<p><strong><em>description:</em></strong>shadowcats is a website that help pre-college students to learn programming. It's a practice of the Software Engineering course.</p>
+<p><strong><em>individual contribution:</em></strong> the management of users' information and the fundamental design and accomplishment of main web pages.</p>
+<p><strong><em>source code:</em></strong> http://stash.secoder.net/projects/SHAD/repos/shadowcats/browse</p>
+</li>
+<li>
+<h3>From January, 2016 to February, 2016: MCM(The Mathematical Contest in Modeling)</h3>
+<p><strong><em>description:</em></strong>I took the MCM with 2 partners and finally finished a thesis, &quot;Zhou JY, Yuan Z, Gao XY. An Optimal Strategy for Goodgrant Foundation&quot;.</p>
+<p><strong><em>individual contribution:</em></strong> part of modeling and all coding works</p>
+</li>
+<li>
+<h3>From March, 2016 to now: the design and analysis of crowdsourcing platform in campus.</h3>
+<p><strong><em>description:</em></strong> This is a thesis for bechelor's degree in management. The research aims at how to use crowdsourcing to satisfy the demands of students in campus. </p>
+</li>
+</ul>
+<h2>Social Services</h2>
+<ul>
+<li>Vice-Chairman of Student Association of CST,THU. </li>
+<li>Member of Undergraduate Course Committee of THU.</li>
+<li>Principal of Tenor voice part of Tsinghua University Chorus.</li>
+<li>Member of department of Art in THU Student Council.</li>
+<li>volunteer as tour guide in Tsinghua University.(清华大学校园讲解志愿者)</li>
+<li>Leader of the group of summer service and learning program in Rural China（SSLP）,2014.</li>
+</ul>
+<h2>Self-appraisal</h2>
+<ul>
+<li>
+<p><strong><em>Key words:</em></strong> confident, persistent, optimistic, good at communication, loving music, accomodating</p>
+<p>Always being confident and optimistic is my prominent characteristic. In general, I think myself good at communication and can keep good relationships with all my classmates. For study, I'm willing to take various courses for a more comprhensive self-development. In my spare time, I love singing, so music is another kind of methods for me to make friends. </p>
+</li>
+</ul>
+<h2>Personal statement</h2>
+<p>Computer science has changed our daily life, both widely and deeply. In the near future, computer will no doubt play a increasingly important role in society, which results in the higher standard of informatization. Recently, the go competition between Lee Sedol and AlphaGo has set off a huge concern of Artifical Intelligence around the world. Similarly, the initial motivation for me to choose computer science as my major is that to some extent, CS can be regarded as a revolutionary technology which will greatly accelerate the process of civilization of human beings.  During my three-year study in CS, I gradually fall in love with programming and enjoy the sense of a little success brought by it. Besides coding, the three-year education also makes me possesses the fundamental knowledge system and professional skills, which are beneficial to my further study. More particularly, I gradually raise my academic interests in database and data mining. Besides CS, I also found that except professional skills, how to manage the information of an organization and how to give everyone full scope to his or her talents are of vital importance. As a result, I chose management as my second bachelor's degree. In all, the combination of technique skills in CS and management of information and people is my academic pursuit, hoping myself to be a compound talent, and finally change the world. </p>
+<p>My campus life can be very tight. Except courses in CS and management, I also take other courses in music and chinese culture. Totally, so far, I have taken 93 courses and got 189 credits. Furthermore, I took part in chorus team, student union and curriculum advisory committee, organized the campus singing competition, group-buying of my department and participate in the Tsinghua's reform of GPA. All of this activities build up my capability in communicating, organizing and cooperating. As for my wide-range hobbies, swimming, basketball, table tennis make up the my main excercise. As for music, I set up an music band and joined it as vocalist. Despite the cultivation of leadership and more social working experience, I have to realize that the GPA is not superior enough though the total credits are among the top 5 precent of my department. Therefore, during this semester, I nearly quit all after-class activities and devote myself to the major study. Considering the wonderful experience of MCM, I'm confident that I will get better in my major study with both good mathematical and English ability. </p>
+<p>UW-THU program excactly matches my aspiration. First of all, by the end of this semester, I will finished all the required courses of computer science in Tsinghua except the bachelor's dissertation. At that time, I will have much free time to study in my own way. The opportunity UW-THU program provides to study abroad for a whole year is just my strong expectation. Second of all, widely acknowledged, UW enjoys a good reputation around the world, not only because its innovative teaching model knowns as CO-OP, but also its computer science, as classical as THU across the world. If offered the chance, I'll not only experience the preeminent academic atmosphere, but receive the academic guidance from famous professors. It will have instructive and constructive influence on examing and improving my professional skills. Third of all, I have to grant that it offers a relatively convenient way to have my further study in UW as a master without series of complicate procedures, significantly reducing the uncertainty and endless wait of offer. Last of all, Canada is an developed country with high standard of civilization and modernization. Throug this program, I may make a lot of canadian friends, imporve my spoken English and broaden my horizon and finally try to be an international talent. </p>
+<p>Moreover, if I had the chance, I would be confident to meet the requirement of UW. First, I would make effort to study main required courses and try to finish a bachelor's dissertation with high academic quality. Second, I would strengthen my study in statistics for the sake of my prospective application for master or Doctor. Third, I might do some research in specific field and attempt to find my supervisor in data mining or database or information management. Last, I would take active part in activities in campus, try to exert my talent in music and strengthen the cooperation and communication between THU and UW.  </p>
+<p>Finally, many thanks to the organization of the UW-THU program and the scholarship provider. Sincerely hope to participate in this program and get a result. Good luck to myself!</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
